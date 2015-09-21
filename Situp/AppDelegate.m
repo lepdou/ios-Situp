@@ -8,7 +8,6 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
-#import "HomeViewController.h"
 #import "STNavigationController.h"
 
 @interface AppDelegate ()

@@ -10,6 +10,7 @@
 #import "STCommon.h"
 #import "STLevelSelectorController.h"
 #import "STLevelSelector.h"
+#import "STTrainPlanController.h"
 
 @interface ViewController ()
 
@@ -41,7 +42,7 @@
     //开始锻炼按钮
     self.go = [self navBtnWithText:@"开始锻炼"
                          withFrame:CGRectMake([self marginLeft], ([UIScreen height] - [self btnGroupHeight])/2, [self btnWidth], [self btnHeight])
-               withSelector:@selector(levelBtnClick)];
+               withSelector:@selector(trainBtnClick)];
     [self.view addSubview:self.go];
     
     //选择级别按钮
@@ -63,6 +64,11 @@
     [self.navigationController pushViewController:selectPage animated:YES];
 }
 
+-(void)trainBtnClick{
+    STTrainPlanController *trainPlanController = [[STTrainPlanController alloc]init];
+    [self.navigationController pushViewController:trainPlanController animated:YES];
+}
+
 -(UIButton *)navBtnWithText:(NSString *)text withFrame:(CGRect)frame withSelector:(SEL) sel{
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeRoundedRect];
     btn.frame = frame;
@@ -72,8 +78,8 @@
     btn.titleLabel.font = [self textSize];
     [btn setTitleColor:[self textColor] forState:UIControlStateNormal];
     btn.backgroundColor = [self btnBgColor];
-    [btn setBackgroundImage:[self imageWithColor:[self btnBgColor]] forState:UIControlStateNormal];
-    [btn setBackgroundImage:[self imageWithColor:[self btnHeightlightBgColor]] forState:UIControlStateHighlighted];
+    [btn setBackgroundImage:[UIImage imageWithColor:[self btnBgColor]] forState:UIControlStateNormal];
+    [btn setBackgroundImage:[UIImage imageWithColor:[self btnHeightlightBgColor]] forState:UIControlStateHighlighted];
     [btn addTarget:self action:sel forControlEvents:UIControlEventTouchUpInside];
     
     return btn;
@@ -119,18 +125,4 @@
     return [UIColor colorWithHexString:@"3C3C3C"];
 }
 
-//  颜色转换为背景图片
-- (UIImage *)imageWithColor:(UIColor *)color {
-    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
-    UIGraphicsBeginImageContext(rect.size);
-    CGContextRef context = UIGraphicsGetCurrentContext();
-    
-    CGContextSetFillColorWithColor(context, [color CGColor]);
-    CGContextFillRect(context, rect);
-    
-    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return image;
-}
 @end

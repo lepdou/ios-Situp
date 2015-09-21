@@ -19,16 +19,17 @@
 		FE76D82E1BAAAA96002895CC /* SitupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D82D1BAAAA96002895CC /* SitupTests.m */; };
 		FE76D8411BAAB283002895CC /* UIScreen+Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8401BAAB283002895CC /* UIScreen+Adapter.m */; };
 		FE76D84A1BAABD49002895CC /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8491BAABD49002895CC /* UIColor+Util.m */; };
-		FE76D84D1BABAFF1002895CC /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D84C1BABAFF1002895CC /* HomeViewController.m */; };
-		FE76D8841BABE385002895CC /* bg_main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE76D8831BABE385002895CC /* bg_main.jpg */; };
 		FE76D8861BABE54B002895CC /* bg_sets_light.png in Resources */ = {isa = PBXBuildFile; fileRef = FE76D8851BABE54B002895CC /* bg_sets_light.png */; };
 		FE76D8881BABE752002895CC /* pushupsicon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE76D8871BABE752002895CC /* pushupsicon.png */; };
-		FE76D88A1BABEE6C002895CC /* icon_training.png in Resources */ = {isa = PBXBuildFile; fileRef = FE76D8891BABEE6C002895CC /* icon_training.png */; };
 		FE76D88C1BABF045002895CC /* situpsicon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE76D88B1BABF045002895CC /* situpsicon.png */; };
 		FE76D8901BAC0024002895CC /* UIToolbar+SU.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D88F1BAC0024002895CC /* UIToolbar+SU.m */; };
 		FE76D8961BAC16AA002895CC /* star_level1.png in Resources */ = {isa = PBXBuildFile; fileRef = FE76D8951BAC16AA002895CC /* star_level1.png */; };
 		FE76D89F1BAC261B002895CC /* STLevelSelectorController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D89E1BAC261B002895CC /* STLevelSelectorController.m */; };
 		FE76D8A31BAC42CC002895CC /* STModelLevelInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8A21BAC42CC002895CC /* STModelLevelInfo.m */; };
+		FE98B6021BAEBB6F0084A9CA /* STTrainPlanController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98B6011BAEBB6F0084A9CA /* STTrainPlanController.m */; };
+		FE98B6051BAEBF560084A9CA /* TrainDataService.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98B6041BAEBF560084A9CA /* TrainDataService.m */; };
+		FE98B60A1BAEC0A80084A9CA /* STModelTrainPlan.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98B6091BAEC0A80084A9CA /* STModelTrainPlan.m */; };
+		FE98B6101BAEC6E90084A9CA /* UIImage+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FE98B60F1BAEC6E90084A9CA /* UIImage+Util.m */; };
 		FEC996411BAE6C24006F6BDE /* NSObject+SBJson.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC996291BAE6C24006F6BDE /* NSObject+SBJson.m */; };
 		FEC996421BAE6C24006F6BDE /* SBJsonParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC9962C1BAE6C24006F6BDE /* SBJsonParser.m */; };
 		FEC996431BAE6C24006F6BDE /* SBJsonStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC9962E1BAE6C24006F6BDE /* SBJsonStreamParser.m */; };
@@ -76,12 +77,8 @@
 		FE76D8421BAAB358002895CC /* STCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommon.h; sourceTree = "<group>"; };
 		FE76D8481BAABD49002895CC /* UIColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
 		FE76D8491BAABD49002895CC /* UIColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
-		FE76D84B1BABAFF1002895CC /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
-		FE76D84C1BABAFF1002895CC /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		FE76D8831BABE385002895CC /* bg_main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = bg_main.jpg; path = "../../../../fuwochengjiaolian_18903_20140828/res/drawable-mdpi-1280x800/bg_main.jpg"; sourceTree = "<group>"; };
 		FE76D8851BABE54B002895CC /* bg_sets_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_sets_light.png; path = "../../../../fuwochengjiaolian_18903_20140828/res/drawable-hdpi/bg_sets_light.png"; sourceTree = "<group>"; };
 		FE76D8871BABE752002895CC /* pushupsicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushupsicon.png; sourceTree = "<group>"; };
-		FE76D8891BABEE6C002895CC /* icon_training.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon_training.png; sourceTree = "<group>"; };
 		FE76D88B1BABF045002895CC /* situpsicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = situpsicon.png; sourceTree = "<group>"; };
 		FE76D88E1BAC0024002895CC /* UIToolbar+SU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+SU.h"; sourceTree = "<group>"; };
 		FE76D88F1BAC0024002895CC /* UIToolbar+SU.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIToolbar+SU.m"; sourceTree = "<group>"; };
@@ -90,6 +87,14 @@
 		FE76D89E1BAC261B002895CC /* STLevelSelectorController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STLevelSelectorController.m; sourceTree = "<group>"; };
 		FE76D8A11BAC42CC002895CC /* STModelLevelInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STModelLevelInfo.h; sourceTree = "<group>"; };
 		FE76D8A21BAC42CC002895CC /* STModelLevelInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STModelLevelInfo.m; sourceTree = "<group>"; };
+		FE98B6001BAEBB6F0084A9CA /* STTrainPlanController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STTrainPlanController.h; path = train/STTrainPlanController.h; sourceTree = "<group>"; };
+		FE98B6011BAEBB6F0084A9CA /* STTrainPlanController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STTrainPlanController.m; path = train/STTrainPlanController.m; sourceTree = "<group>"; };
+		FE98B6031BAEBF560084A9CA /* TrainDataService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TrainDataService.h; path = util/TrainDataService.h; sourceTree = "<group>"; };
+		FE98B6041BAEBF560084A9CA /* TrainDataService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TrainDataService.m; path = util/TrainDataService.m; sourceTree = "<group>"; };
+		FE98B6081BAEC0A80084A9CA /* STModelTrainPlan.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = STModelTrainPlan.h; path = util/model/STModelTrainPlan.h; sourceTree = "<group>"; };
+		FE98B6091BAEC0A80084A9CA /* STModelTrainPlan.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = STModelTrainPlan.m; path = util/model/STModelTrainPlan.m; sourceTree = "<group>"; };
+		FE98B60E1BAEC6E90084A9CA /* UIImage+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Util.h"; sourceTree = "<group>"; };
+		FE98B60F1BAEC6E90084A9CA /* UIImage+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Util.m"; sourceTree = "<group>"; };
 		FEC996281BAE6C24006F6BDE /* NSObject+SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+SBJson.h"; sourceTree = "<group>"; };
 		FEC996291BAE6C24006F6BDE /* NSObject+SBJson.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+SBJson.m"; sourceTree = "<group>"; };
 		FEC9962A1BAE6C24006F6BDE /* SBJson.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJson.h; sourceTree = "<group>"; };
@@ -136,6 +141,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FE0319D71BAEB7E400D5A732 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		FE0319D81BAEB80D00D5A732 /* train */ = {
+			isa = PBXGroup;
+			children = (
+				FE98B6001BAEBB6F0084A9CA /* STTrainPlanController.h */,
+				FE98B6011BAEBB6F0084A9CA /* STTrainPlanController.m */,
+			);
+			name = train;
+			sourceTree = "<group>";
+		};
 		FE76D8051BAAAA96002895CC = {
 			isa = PBXGroup;
 			children = (
@@ -157,7 +178,9 @@
 		FE76D8101BAAAA96002895CC /* Situp */ = {
 			isa = PBXGroup;
 			children = (
+				FE98B6061BAEBFAE0084A9CA /* util */,
 				FEC9964D1BAE6C44006F6BDE /* pages */,
+				FE0319D71BAEB7E400D5A732 /* New Group */,
 				FEDBBBB01BAE6A010082771F /* lib */,
 				FE76D8381BAAB186002895CC /* common */,
 				FE76D8151BAAAA96002895CC /* AppDelegate.h */,
@@ -203,8 +226,6 @@
 			children = (
 				FE76D8181BAAAA96002895CC /* ViewController.h */,
 				FE76D8191BAAAA96002895CC /* ViewController.m */,
-				FE76D84B1BABAFF1002895CC /* HomeViewController.h */,
-				FE76D84C1BABAFF1002895CC /* HomeViewController.m */,
 			);
 			name = home;
 			sourceTree = "<group>";
@@ -218,6 +239,8 @@
 				FE76D8421BAAB358002895CC /* STCommon.h */,
 				FE76D8481BAABD49002895CC /* UIColor+Util.h */,
 				FE76D8491BAABD49002895CC /* UIColor+Util.m */,
+				FE98B60E1BAEC6E90084A9CA /* UIImage+Util.h */,
+				FE98B60F1BAEC6E90084A9CA /* UIImage+Util.m */,
 			);
 			name = common;
 			sourceTree = "<group>";
@@ -227,10 +250,8 @@
 			children = (
 				FE76D8951BAC16AA002895CC /* star_level1.png */,
 				FE76D88B1BABF045002895CC /* situpsicon.png */,
-				FE76D8891BABEE6C002895CC /* icon_training.png */,
 				FE76D8871BABE752002895CC /* pushupsicon.png */,
 				FE76D8851BABE54B002895CC /* bg_sets_light.png */,
-				FE76D8831BABE385002895CC /* bg_main.jpg */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -267,9 +288,29 @@
 			name = model;
 			sourceTree = "<group>";
 		};
+		FE98B6061BAEBFAE0084A9CA /* util */ = {
+			isa = PBXGroup;
+			children = (
+				FE98B6071BAEC0380084A9CA /* model */,
+				FE98B6031BAEBF560084A9CA /* TrainDataService.h */,
+				FE98B6041BAEBF560084A9CA /* TrainDataService.m */,
+			);
+			name = util;
+			sourceTree = "<group>";
+		};
+		FE98B6071BAEC0380084A9CA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				FE98B6081BAEC0A80084A9CA /* STModelTrainPlan.h */,
+				FE98B6091BAEC0A80084A9CA /* STModelTrainPlan.m */,
+			);
+			name = model;
+			sourceTree = "<group>";
+		};
 		FEC9964D1BAE6C44006F6BDE /* pages */ = {
 			isa = PBXGroup;
 			children = (
+				FE0319D81BAEB80D00D5A732 /* train */,
 				FE76D8971BAC1A10002895CC /* level */,
 				FE76D8371BAAAB2C002895CC /* home */,
 			);
@@ -404,8 +445,6 @@
 				FE76D8881BABE752002895CC /* pushupsicon.png in Resources */,
 				FE76D81F1BAAAA96002895CC /* Images.xcassets in Resources */,
 				FE76D8961BAC16AA002895CC /* star_level1.png in Resources */,
-				FE76D88A1BABEE6C002895CC /* icon_training.png in Resources */,
-				FE76D8841BABE385002895CC /* bg_main.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -424,10 +463,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE76D81A1BAAAA96002895CC /* ViewController.m in Sources */,
+				FE98B6021BAEBB6F0084A9CA /* STTrainPlanController.m in Sources */,
 				FEC996481BAE6C24006F6BDE /* SBJsonStreamWriterAccumulator.m in Sources */,
 				FEC996451BAE6C24006F6BDE /* SBJsonStreamParserAdapter.m in Sources */,
 				FEC9964B1BAE6C24006F6BDE /* SBJsonUTF8Stream.m in Sources */,
 				FE76D8171BAAAA96002895CC /* AppDelegate.m in Sources */,
+				FE98B60A1BAEC0A80084A9CA /* STModelTrainPlan.m in Sources */,
+				FE98B6051BAEBF560084A9CA /* TrainDataService.m in Sources */,
 				FEC996461BAE6C24006F6BDE /* SBJsonStreamParserState.m in Sources */,
 				FE76D8141BAAAA96002895CC /* main.m in Sources */,
 				FEC9964C1BAE6C24006F6BDE /* SBJsonWriter.m in Sources */,
@@ -440,8 +482,8 @@
 				FEC996421BAE6C24006F6BDE /* SBJsonParser.m in Sources */,
 				FEC9964A1BAE6C24006F6BDE /* SBJsonTokeniser.m in Sources */,
 				FE76D8411BAAB283002895CC /* UIScreen+Adapter.m in Sources */,
+				FE98B6101BAEC6E90084A9CA /* UIImage+Util.m in Sources */,
 				FE76D84A1BAABD49002895CC /* UIColor+Util.m in Sources */,
-				FE76D84D1BABAFF1002895CC /* HomeViewController.m in Sources */,
 				FE76D8A31BAC42CC002895CC /* STModelLevelInfo.m in Sources */,
 				FEC996441BAE6C24006F6BDE /* SBJsonStreamParserAccumulator.m in Sources */,
 				FEC996411BAE6C24006F6BDE /* NSObject+SBJson.m in Sources */,

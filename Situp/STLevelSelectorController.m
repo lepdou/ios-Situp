@@ -9,6 +9,7 @@
 #import "STLevelSelectorController.h"
 #import "STModelLevelInfo.h"
 #import "STModelLevelCell.h"
+#import "STTrainPlanController.h"
 
 
 @interface STLevelSelectorController()<UIAlertViewDelegate>
@@ -29,7 +30,6 @@
     self.title = @"选择难度";
     #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
-    self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
     
 }
 
@@ -130,11 +130,11 @@
         NSString *filename=[plistPath1 stringByAppendingPathComponent:@"selected.plist"];
         //输入写入
         [selectedLevel writeToFile:filename atomically:YES];
-        
-        //那怎么证明我的数据写入了呢？读出来看看
         NSMutableDictionary *data1 = [[NSMutableDictionary alloc] initWithContentsOfFile:filename];
         NSLog(@"%@", data1);
         //跳转到训练页面
+        STTrainPlanController *trainPlanController = [[STTrainPlanController alloc]init];
+        [self.navigationController pushViewController:trainPlanController animated:YES];
     }
 }
 @end
