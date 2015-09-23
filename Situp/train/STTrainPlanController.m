@@ -164,6 +164,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 
 -(void)reSelectLevelBtnClickEvent{
     STLevelSelectorController *selectPage = [[STLevelSelectorController alloc] init];
+    [UIDevice currentDevice].proximityMonitoringEnabled = NO;
     [self.navigationController pushViewController:selectPage animated:YES];
 }
 
@@ -205,6 +206,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 }
 
 -(void)giveUpAction{
+    [UIDevice currentDevice].proximityMonitoringEnabled = NO;
     [self.navigationController popViewControllerAnimated:YES];
 }
 

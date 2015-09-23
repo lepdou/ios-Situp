@@ -14,7 +14,6 @@
 		FE76D8171BAAAA96002895CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8161BAAAA96002895CC /* AppDelegate.m */; };
 		FE76D81A1BAAAA96002895CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8191BAAAA96002895CC /* ViewController.m */; };
 		FE76D81D1BAAAA96002895CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FE76D81B1BAAAA96002895CC /* Main.storyboard */; };
-		FE76D81F1BAAAA96002895CC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE76D81E1BAAAA96002895CC /* Images.xcassets */; };
 		FE76D8221BAAAA96002895CC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = FE76D8201BAAAA96002895CC /* LaunchScreen.xib */; };
 		FE76D82E1BAAAA96002895CC /* SitupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D82D1BAAAA96002895CC /* SitupTests.m */; };
 		FE76D8411BAAB283002895CC /* UIScreen+Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8401BAAB283002895CC /* UIScreen+Adapter.m */; };
@@ -42,6 +41,8 @@
 		FEC9964A1BAE6C24006F6BDE /* SBJsonTokeniser.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC9963C1BAE6C24006F6BDE /* SBJsonTokeniser.m */; };
 		FEC9964B1BAE6C24006F6BDE /* SBJsonUTF8Stream.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC9963E1BAE6C24006F6BDE /* SBJsonUTF8Stream.m */; };
 		FEC9964C1BAE6C24006F6BDE /* SBJsonWriter.m in Sources */ = {isa = PBXBuildFile; fileRef = FEC996401BAE6C24006F6BDE /* SBJsonWriter.m */; };
+		FEFB84E61BB29F9100F01929 /* ic_launcher.png in Resources */ = {isa = PBXBuildFile; fileRef = FEFB84E51BB29F9100F01929 /* ic_launcher.png */; settings = {ASSET_TAGS = (); }; };
+		FEFB84E91BB2A02200F01929 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FE76D81E1BAAAA96002895CC /* Images.xcassets */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +122,7 @@
 		FEC9963F1BAE6C24006F6BDE /* SBJsonWriter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBJsonWriter.h; sourceTree = "<group>"; };
 		FEC996401BAE6C24006F6BDE /* SBJsonWriter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBJsonWriter.m; sourceTree = "<group>"; };
 		FEDBBBAF1BAE68AC0082771F /* levels.geojson */ = {isa = PBXFileReference; lastKnownFileType = text; path = levels.geojson; sourceTree = "<group>"; };
+		FEFB84E51BB29F9100F01929 /* ic_launcher.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ic_launcher.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -196,6 +198,7 @@
 		FE76D8111BAAAA96002895CC /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				FEFB84E51BB29F9100F01929 /* ic_launcher.png */,
 				FE76D8431BAAB8C6002895CC /* images */,
 				FE76D8121BAAAA96002895CC /* Info.plist */,
 				FE76D8131BAAAA96002895CC /* main.m */,
@@ -438,13 +441,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEFB84E91BB2A02200F01929 /* Images.xcassets in Resources */,
 				FE42E6DF1BAE73CF002BA300 /* levels.geojson in Resources */,
+				FEFB84E61BB29F9100F01929 /* ic_launcher.png in Resources */,
 				FE76D81D1BAAAA96002895CC /* Main.storyboard in Resources */,
 				FE76D8221BAAAA96002895CC /* LaunchScreen.xib in Resources */,
 				FE76D88C1BABF045002895CC /* situpsicon.png in Resources */,
 				FE76D8861BABE54B002895CC /* bg_sets_light.png in Resources */,
 				FE76D8881BABE752002895CC /* pushupsicon.png in Resources */,
-				FE76D81F1BAAAA96002895CC /* Images.xcassets in Resources */,
 				FE76D8961BAC16AA002895CC /* star_level1.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,13 +618,12 @@
 		FE76D8321BAAAA96002895CC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Situp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lepdou.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Situp;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -628,13 +631,12 @@
 		FE76D8331BAAAA96002895CC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = Situp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lepdou.$(PRODUCT_NAME:rfc1034identifier)";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Situp;
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
