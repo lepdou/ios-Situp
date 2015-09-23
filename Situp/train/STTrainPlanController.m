@@ -36,6 +36,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 @property(nonatomic, strong) NSTimer *timer;
 @property(nonatomic) int restTime;
 @property(nonatomic) bool isPause;
+@property(nonatomic) bool isAleadyStarted;
 
 //1-开始训练 2-放弃 3-重做
 @property(nonatomic) TrainButtonActionType trainBtnAction;
@@ -96,6 +97,10 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
     [self.view addSubview:_selectLevelBtn];
 }
 
+-(void)viewWillDisappear:(BOOL)animated{
+    [UIDevice currentDevice].proximityMonitoringEnabled = YES;
+}
+
 -(void)initData{
     [self initTimer];
     _plan = [TrainDataService getTrainPlanModel];
@@ -104,6 +109,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
     
     _currentLevelCount = [self getNextTrainCountInfo];
     _isPause = false;
+    _isAleadyStarted = false;
 }
 
 -(UIButton *)btnWithText:(NSString *)text frame:(CGRect) frame selector:(SEL)sel{
@@ -171,7 +177,6 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 -(void)trainAction{
     if (self.currentLevelIdx == 0) {//第一次启动
         self.levelsLbl.frame = CGRectMake(0, [self navBarHeight], [UIScreen width], 100);
-        [self refreshwithView:self.levelsLbl];
         
         self.counterLbl.hidden = NO;
         self.progressView.hidden = NO;
@@ -182,12 +187,12 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
                                      [UIScreen height] - [self btnHeight] -[self btnMarginToBottom],
                                      [UIScreen width] - 2*[self btnMarginToLeft],
                                      [self btnHeight]);
-        [self refreshwithView:self.trainBtn];
-        
-        //开启距离感应
-        [UIDevice currentDevice].proximityMonitoringEnabled = YES;
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(situp) name:UIDeviceProximityStateDidChangeNotification object:nil];
-        
+        if (!_isAleadyStarted) {
+            //开启距离感应
+            [UIDevice currentDevice].proximityMonitoringEnabled = YES;
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(situp) name:UIDeviceProximityStateDidChangeNotification object:nil];
+            _isAleadyStarted = YES;
+        }
     }else{
         //如果有定时器，则关闭
         self.restTime = REST_TIME;
@@ -219,6 +224,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 
 //开启距离感应
 -(void)onProximityMonitor{
+    [UIDevice currentDevice].proximityMonitoringEnabled = YES;
     _isPause = false;
 }
 
@@ -270,7 +276,6 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
                                  [UIScreen height] - [self btnHeight] -[self btnMarginToBottom],
                                  [self btnWidth],
                                  [self btnHeight]);
-    [self refreshwithView:self.trainBtn];
     _trainBtnAction = ReTrain;
 
     
