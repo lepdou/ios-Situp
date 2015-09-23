@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
+extern int const REST_TIME;
 @interface STTrainPlanController : UIViewController
 
 @end
