@@ -12,5 +12,7 @@
 @interface TrainDataService : NSObject
 
 +(STModelTrainPlan *)getTrainPlanModel;
++(void)saveTrainInfoWithCount:(int)count;
++(NSArray *)getTrainInfo;
 
 @end

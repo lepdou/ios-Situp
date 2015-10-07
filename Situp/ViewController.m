@@ -11,14 +11,14 @@
 #import "STLevelSelectorController.h"
 #import "STLevelSelector.h"
 #import "STTrainPlanController.h"
+#import "STTrainHistoryController.h"
 
 @interface ViewController ()
 
-
-@property(nonatomic, strong) UIToolbar *sutoolbar;
 @property(nonatomic, strong) UIButton *go;
 @property(nonatomic, strong) UIButton *selectLevel;
 @property(nonatomic, strong) UIButton *help;
+@property(nonatomic, strong) UIButton *history;
 
 @end
 
@@ -31,13 +31,10 @@
     
     //初始化rootView
     UIView *rootView = self.view;
-    rootView.backgroundColor = [UIColor colorWithHexString:@"F0F0F0"];
+    rootView.backgroundColor = [UIColor whiteColor];
     self.title = @"仰卧起坐教练";
     #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:nil action:nil];
-    
-    self.sutoolbar = [[UIToolbar alloc] toolbarWithSitup:1];
-    [rootView addSubview:self.sutoolbar];
     
     //开始锻炼按钮
     self.go = [self navBtnWithText:@"开始锻炼"
@@ -51,9 +48,15 @@
                         withSelector:@selector(levelBtnClick)];
     [self.view addSubview:self.selectLevel];
     
+    //历史按钮
+    self.history = [self navBtnWithText:@"历史记录"
+                              withFrame:CGRectMake([self marginLeft], _go.frame.origin.y + ([self btnHeight] + [self spaceBetweenBtn]) * 2, [self btnWidth], [self btnHeight])
+                           withSelector:@selector(historyBtnClick)];
+    [self.view addSubview:self.history];
+    
     //帮助按钮
     self.help = [self navBtnWithText:@"查看帮助"
-                         withFrame:CGRectMake([self marginLeft], _go.frame.origin.y + ([self btnHeight] + [self spaceBetweenBtn]) * 2, [self btnWidth], [self btnHeight])
+                         withFrame:CGRectMake([self marginLeft], _history.frame.origin.y + [self btnHeight] + [self spaceBetweenBtn], [self btnWidth], [self btnHeight])
                  withSelector:@selector(levelBtnClick)];
     [self.view addSubview:self.help];
 
@@ -67,6 +70,11 @@
 -(void)trainBtnClick{
     STTrainPlanController *trainPlanController = [[STTrainPlanController alloc]init];
     [self.navigationController pushViewController:trainPlanController animated:YES];
+}
+
+-(void)historyBtnClick{
+    STTrainHistoryController *vc = [[STTrainHistoryController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 -(UIButton *)navBtnWithText:(NSString *)text withFrame:(CGRect)frame withSelector:(SEL) sel{

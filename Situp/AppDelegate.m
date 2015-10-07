@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "ViewController.h"
 #import "STNavigationController.h"
+#import "STTrainHistoryController.h"
 
 @interface AppDelegate ()
 

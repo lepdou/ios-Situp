@@ -8,6 +8,8 @@
 
 #import "UIToolbar+SU.h"
 #import "STCommon.h"
+#import "STTrainHistoryController.h"
+#import "ViewController.h"
 
 @implementation UIToolbar(Situp)
 
@@ -16,13 +18,14 @@
     toolbar.frame = CGRectMake(0, [UIScreen height] - [self toolbarHeight], [UIScreen width], [self toolbarHeight]);
     [toolbar setBarTintColor:[UIColor colorWithHexString:@"333"]];
     [toolbar setBarStyle:UIBarStyleBlackTranslucent];
-//    [toolbar setBackgroundImage:[UIImage imageNamed:@"bg_sets_light.jpg"] forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault];
+    //    [toolbar setBackgroundImage:[UIImage imageNamed:@"bg_sets_light.jpg"] forToolbarPosition:UIBarPositionBottom barMetrics:UIBarMetricsDefault];
     
     UIBarButtonItem *space1 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     UIBarButtonItem *space2 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     UIBarButtonItem *space3 = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     
-    UIView *trainTab = [UIView new];
+    UIButton *trainTab = [[UIButton alloc]init];
+    [trainTab addTarget:self action:@selector(trainBtnClickEvent) forControlEvents:UIControlEventTouchUpInside];
     trainTab.frame = CGRectMake(0, 0, [UIScreen width]/2, 50);
     UIImageView *img1= [UIImageView new];
     img1.image = [UIImage imageNamed:@"situpsicon.png"];
@@ -37,7 +40,8 @@
     [trainTab addSubview:train];
     UIBarButtonItem *begin = [[UIBarButtonItem alloc] initWithCustomView:trainTab];
     
-    UIView *historyTab = [UIView new];
+    UIButton *historyTab = [UIButton new];
+    [trainTab addTarget:self action:@selector(historyBtnClickEvent) forControlEvents:UIControlEventTouchUpInside];
     historyTab.frame = CGRectMake([UIScreen width]/2, 0, [UIScreen width]/2, 50);
     UIImageView *historyImg= [UIImageView new];
     historyImg.image = [UIImage imageNamed:@"star_level1.png"];
@@ -54,16 +58,16 @@
     
     NSArray *btnGroup = [[NSArray alloc] initWithObjects:space1, begin, space2, history, space3,nil];
     toolbar.items = btnGroup;
-    
-//    if (withSelectedIndex == 1) {
-//        trainTab.backgroundColor = [self selectedItemColor];
-//        historyTab.backgroundColor = [self notSelectedItemColor];
-//    }else{
-//        trainTab.backgroundColor = [self notSelectedItemColor];
-//        historyTab.backgroundColor = [self selectedItemColor];
-//    }
-//    
     return toolbar;
+}
+
+-(void)trainBtnClickEvent{
+    NSLog(@"dd");
+}
+
+-(void)historyBtnClickEvent{
+    //    [self.navigationController pushViewController:selectPage animated:YES];
+    NSLog(@"dd");
 }
 
 -(UIColor *)selectedItemColor{

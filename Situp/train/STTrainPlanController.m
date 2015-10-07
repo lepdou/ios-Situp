@@ -11,6 +11,7 @@
 #import "TrainDataService.h"
 #import "STModelTrainPlan.h"
 #import "STLevelSelectorController.h"
+#import "AVFoundation/AVAudioPlayer.h"
 
 int const REST_TIME = 60;
 
@@ -32,6 +33,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 @property(nonatomic, strong) STModelTrainPlan *plan;
 @property(nonatomic) NSInteger currentLevelIdx;
 @property(nonatomic) long currentLevelCount;//当前仰卧起坐个数
+@property(nonatomic) int doCounter;
 
 @property(nonatomic, strong) NSTimer *timer;
 @property(nonatomic) int restTime;
@@ -45,16 +47,16 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 
 @implementation STTrainPlanController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self initData];
-    
     self.title = [[NSString alloc] initWithFormat:@"%@(%@)", _plan.mainLevel, _plan.subLevel];
-    #pragma clang diagnostic ignored"-Wdeprecated-declarations"
+#pragma clang diagnostic ignored"-Wdeprecated-declarations"
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
     UIView *rootView = self.view;
     rootView.backgroundColor = [UIColor colorWithHexString:@"F0F0F0"];
-        
+    
     _levelsLbl = [[UILabel alloc]initWithFrame:CGRectMake(0, 150, [UIScreen width], 100)];
     _levelsLbl.backgroundColor = [UIColor whiteColor];
     _levelsLbl.font = [UIFont systemFontOfSize:40];
@@ -84,9 +86,9 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
     [self.view addSubview:_progressView];
     
     CGRect trainBtnFrame = CGRectMake([self btnMarginToLeft],
-                            [UIScreen height] - [self btnHeight] -[self btnMarginToBottom],
-                            [self btnWidth],
-                            [self btnHeight]);
+                                      [UIScreen height] - [self btnHeight] -[self btnMarginToBottom],
+                                      [self btnWidth],
+                                      [self btnHeight]);
     _trainBtn = [self btnWithText:@"开始" frame:trainBtnFrame selector:@selector(startTrainBtnClickEvent)];
     [self.view addSubview:_trainBtn];
     
@@ -97,8 +99,14 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
     [self.view addSubview:_selectLevelBtn];
 }
 
+-(void)viewWillAppear:(BOOL)animated{
+    _doCounter = 0;
+}
+
 -(void)viewWillDisappear:(BOOL)animated{
-    [UIDevice currentDevice].proximityMonitoringEnabled = YES;
+    //记录此处训练记录
+    [TrainDataService saveTrainInfoWithCount:_doCounter];
+    [UIDevice currentDevice].proximityMonitoringEnabled = NO;
 }
 
 -(void)initData{
@@ -162,7 +170,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
         case ReTrain:
             [self reTrainAction];
             break;
-        
+            
         default:
             break;
     }
@@ -242,6 +250,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
     if ([UIDevice currentDevice].proximityState == NO || _isPause) {
         return;
     }
+    self.doCounter++;
     self.currentLevelCount --;
     self.counterLbl.text = [[NSString alloc]initWithFormat:@"%ld",self.currentLevelCount];
     if (self.currentLevelCount == 0) {
@@ -277,7 +286,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
                                  [self btnWidth],
                                  [self btnHeight]);
     _trainBtnAction = ReTrain;
-
+    
     
 }
 
