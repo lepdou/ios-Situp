@@ -9,7 +9,11 @@
 ###训练页面
 <img src="http://a2.qpic.cn/psb?/d2b67e7c-e0eb-4b11-baf9-13669a32f53f/7v50z0fv5LY9ayuM4Pdl3eN1j8OfBMgp2NWB2PV2edk!/b/dHUBAAAAAAAA&ek=1&kp=1&pt=0&bo=gAJyBO4CNgUDCAY!&sce=50-1-1&rf=viewer_311" width="375px" height="627px"/>
 <img src="http://a3.qpic.cn/psb?/d2b67e7c-e0eb-4b11-baf9-13669a32f53f/BNKjRWrEU2LrSla9nbM0mJqOFLf3epSixXUIpPBaQ7I!/b/dHYBAAAAAAAA&ek=1&kp=1&pt=0&bo=gAJyBO4CNgUDCAY!&sce=50-1-1&rf=viewer_311" width="375px" height="627px"/>
-
+<img src="http://a3.qpic.cn/psb?/d2b67e7c-e0eb-4b11-baf9-13669a32f53f/liS1ng0BBxjaIdA2k6x4TgT*Lha1gYPqP2AzZYXhbUE!/b/dHYBAAAAAAAA&ek=1&kp=1&pt=0&bo=gAJyBO4CNgUDCAY!&sce=0-12-12&rf=viewer_311" width="375px" height="627px"/>
+<img src="http://a1.qpic.cn/psb?/d2b67e7c-e0eb-4b11-baf9-13669a32f53f/6K96nl7T77yIubBha4WvWDDITC8xDeKeIxCYW1YviEA!/b/dIgBAAAAAAAA&ek=1&kp=1&pt=0&bo=gAJyBO4CNgUDCAY!&sce=0-12-12&rf=viewer_311" width="375px" height="627px"/>
+<p>
+ 使用方法：做仰卧起坐时把手机放在后背地面上，或者做俯卧撑时把手机放在前胸地面上，每一次动作通过距离感应自动计数。
+</p>
 <hr>
 
 ###历史图表页
