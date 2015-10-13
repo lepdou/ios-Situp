@@ -55,8 +55,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
     UIView *rootView = self.view;
-    rootView.backgroundColor = [UIColor colorWithHexString:@"F0F0F0"];
-    
+    rootView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_background"]];
     _levelsLbl = [[UILabel alloc]initWithFrame:CGRectMake(0, 150, [UIScreen width], 100)];
     _levelsLbl.backgroundColor = [UIColor whiteColor];
     _levelsLbl.font = [UIFont systemFontOfSize:40];
@@ -340,7 +339,7 @@ typedef NS_ENUM(NSInteger,TrainButtonActionType){
 }
 
 -(UIColor *)btnBgColor{
-    return [UIColor colorWithHexString:@"8E8E8E"];
+    return [UIColor colorWithHexString:@"2a5caa"];
 }
 
 -(UIColor *)btnHeightlightBgColor{

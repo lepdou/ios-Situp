@@ -10,6 +10,8 @@
 		FE42E6DF1BAE73CF002BA300 /* levels.geojson in Resources */ = {isa = PBXBuildFile; fileRef = FEDBBBAF1BAE68AC0082771F /* levels.geojson */; };
 		FE42E6E21BAE77CD002BA300 /* STModelLevelCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FE42E6E11BAE77CD002BA300 /* STModelLevelCell.m */; };
 		FE42E6E51BAE8F3B002BA300 /* STNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE42E6E41BAE8F3B002BA300 /* STNavigationController.m */; };
+		FE4563071BC61A2000F780DA /* sport2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE4563061BC61A2000F780DA /* sport2.jpg */; settings = {ASSET_TAGS = (); }; };
+		FE4563091BC6237C00F780DA /* bg_main.jpg in Resources */ = {isa = PBXBuildFile; fileRef = FE4563081BC6237C00F780DA /* bg_main.jpg */; settings = {ASSET_TAGS = (); }; };
 		FE76D8141BAAAA96002895CC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8131BAAAA96002895CC /* main.m */; };
 		FE76D8171BAAAA96002895CC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8161BAAAA96002895CC /* AppDelegate.m */; };
 		FE76D81A1BAAAA96002895CC /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8191BAAAA96002895CC /* ViewController.m */; };
@@ -18,7 +20,6 @@
 		FE76D82E1BAAAA96002895CC /* SitupTests.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D82D1BAAAA96002895CC /* SitupTests.m */; };
 		FE76D8411BAAB283002895CC /* UIScreen+Adapter.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8401BAAB283002895CC /* UIScreen+Adapter.m */; };
 		FE76D84A1BAABD49002895CC /* UIColor+Util.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D8491BAABD49002895CC /* UIColor+Util.m */; };
-		FE76D8861BABE54B002895CC /* bg_sets_light.png in Resources */ = {isa = PBXBuildFile; fileRef = FE76D8851BABE54B002895CC /* bg_sets_light.png */; };
 		FE76D8881BABE752002895CC /* pushupsicon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE76D8871BABE752002895CC /* pushupsicon.png */; };
 		FE76D88C1BABF045002895CC /* situpsicon.png in Resources */ = {isa = PBXBuildFile; fileRef = FE76D88B1BABF045002895CC /* situpsicon.png */; };
 		FE76D8901BAC0024002895CC /* UIToolbar+SU.m in Sources */ = {isa = PBXBuildFile; fileRef = FE76D88F1BAC0024002895CC /* UIToolbar+SU.m */; };
@@ -68,6 +69,8 @@
 		FE42E6E11BAE77CD002BA300 /* STModelLevelCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STModelLevelCell.m; sourceTree = "<group>"; };
 		FE42E6E31BAE8F3B002BA300 /* STNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STNavigationController.h; sourceTree = "<group>"; };
 		FE42E6E41BAE8F3B002BA300 /* STNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STNavigationController.m; sourceTree = "<group>"; };
+		FE4563061BC61A2000F780DA /* sport2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sport2.jpg; sourceTree = "<group>"; };
+		FE4563081BC6237C00F780DA /* bg_main.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg_main.jpg; sourceTree = "<group>"; };
 		FE76D80E1BAAAA96002895CC /* Situp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Situp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FE76D8121BAAAA96002895CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FE76D8131BAAAA96002895CC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		FE76D8421BAAB358002895CC /* STCommon.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = STCommon.h; sourceTree = "<group>"; };
 		FE76D8481BAABD49002895CC /* UIColor+Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Util.h"; sourceTree = "<group>"; };
 		FE76D8491BAABD49002895CC /* UIColor+Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Util.m"; sourceTree = "<group>"; };
-		FE76D8851BABE54B002895CC /* bg_sets_light.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bg_sets_light.png; path = "../../../../fuwochengjiaolian_18903_20140828/res/drawable-hdpi/bg_sets_light.png"; sourceTree = "<group>"; };
 		FE76D8871BABE752002895CC /* pushupsicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pushupsicon.png; sourceTree = "<group>"; };
 		FE76D88B1BABF045002895CC /* situpsicon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = situpsicon.png; sourceTree = "<group>"; };
 		FE76D88E1BAC0024002895CC /* UIToolbar+SU.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIToolbar+SU.h"; sourceTree = "<group>"; };
@@ -250,10 +252,11 @@
 		FE76D8431BAAB8C6002895CC /* images */ = {
 			isa = PBXGroup;
 			children = (
+				FE4563081BC6237C00F780DA /* bg_main.jpg */,
+				FE4563061BC61A2000F780DA /* sport2.jpg */,
 				FE76D8951BAC16AA002895CC /* star_level1.png */,
 				FE76D88B1BABF045002895CC /* situpsicon.png */,
 				FE76D8871BABE752002895CC /* pushupsicon.png */,
-				FE76D8851BABE54B002895CC /* bg_sets_light.png */,
 			);
 			name = images;
 			sourceTree = "<group>";
@@ -493,10 +496,11 @@
 				FE76D81D1BAAAA96002895CC /* Main.storyboard in Resources */,
 				FE76D8221BAAAA96002895CC /* LaunchScreen.xib in Resources */,
 				FE76D88C1BABF045002895CC /* situpsicon.png in Resources */,
-				FE76D8861BABE54B002895CC /* bg_sets_light.png in Resources */,
 				FEA73BCA1BBBCFCA0021B504 /* ic_launcher.png in Resources */,
 				FE76D8881BABE752002895CC /* pushupsicon.png in Resources */,
 				FE76D8961BAC16AA002895CC /* star_level1.png in Resources */,
+				FE4563091BC6237C00F780DA /* bg_main.jpg in Resources */,
+				FE4563071BC61A2000F780DA /* sport2.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

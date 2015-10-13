@@ -29,7 +29,7 @@
 
     self.title = @"选择难度";
     #pragma clang diagnostic ignored"-Wdeprecated-declarations"
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"d" style:UIBarButtonItemStyleBordered target:nil action:nil];
     
 }
 

@@ -25,7 +25,7 @@
         [UIApplication sharedApplication].statusBarStyle = UIStatusBarStyleDefault;
     }
     
-    [navBar setBarTintColor:[UIColor colorWithHexString:@"999"]];
+    [navBar setBarTintColor:[UIColor colorWithHexString:@"2a5caa"]];
     [navBar setBackgroundImage:[UIImage imageNamed:navBarBg] forBarMetrics:UIBarMetricsDefault];
     
     // 3.标题

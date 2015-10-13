@@ -31,7 +31,7 @@
     
     //初始化rootView
     UIView *rootView = self.view;
-    rootView.backgroundColor = [UIColor whiteColor];
+    rootView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_background"]];
     self.title = @"仰卧起坐教练";
     #pragma clang diagnostic ignored"-Wdeprecated-declarations"
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:nil action:nil];
@@ -54,11 +54,11 @@
                            withSelector:@selector(historyBtnClick)];
     [self.view addSubview:self.history];
     
-    //帮助按钮
-    self.help = [self navBtnWithText:@"查看帮助"
-                         withFrame:CGRectMake([self marginLeft], _history.frame.origin.y + [self btnHeight] + [self spaceBetweenBtn], [self btnWidth], [self btnHeight])
-                 withSelector:@selector(levelBtnClick)];
-    [self.view addSubview:self.help];
+//    //帮助按钮
+//    self.help = [self navBtnWithText:@"查看帮助"
+//                         withFrame:CGRectMake([self marginLeft], _history.frame.origin.y + [self btnHeight] + [self spaceBetweenBtn], [self btnWidth], [self btnHeight])
+//                 withSelector:@selector(levelBtnClick)];
+//    [self.view addSubview:self.help];
 
 }
 
@@ -126,11 +126,11 @@
 }
 
 -(UIColor *)btnBgColor{
-    return [UIColor colorWithHexString:@"8E8E8E"];
+    return [UIColor colorWithHexString:@"2a5caa"];
 }
 
 -(UIColor *)btnHeightlightBgColor{
-    return [UIColor colorWithHexString:@"3C3C3C"];
+    return [UIColor colorWithHexString:@"181d4b"];
 }
 
 @end

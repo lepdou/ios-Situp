@@ -18,6 +18,7 @@
 @property(nonatomic, strong) NSArray *yLabelArray;
 @property(nonatomic, strong) UIScrollView *scrollView;
 @property(nonatomic, strong) UUChart *chartView;
+@property(nonatomic, strong) UIImageView *image;
 @end
 
 @implementation STTrainHistoryController
@@ -30,9 +31,12 @@
     
     [self initData];
     
-    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, ([UIScreen height] - [self chartHeight])/2 - 65, [UIScreen mainScreen].bounds.size.width, [self chartHeight] + 65)];
+    _scrollView = [[UIScrollView alloc]initWithFrame:CGRectMake(0, 10, [UIScreen mainScreen].bounds.size.width, [self chartHeight] + 65)];
     _scrollView.contentSize = CGSizeMake([self chartWith], [self chartHeight]);
     _scrollView.scrollEnabled = YES;
+//    [_scrollView setContentOffset:CGPointMake(_scrollView.contentSize.width-[UIScreen width], 0) animated:YES];
+    [_scrollView scrollRectToVisible:CGRectMake(_scrollView.contentSize.width-[UIScreen width], 0,[UIScreen mainScreen].bounds.size.width, [self chartHeight] + 65) animated:YES];
+//    [_scrollView set]
     
     [rootView addSubview:_scrollView];
     
@@ -40,11 +44,12 @@
                                                    withSource:self
                                                     withStyle:UUChartLineStyle];
     
-    //    self.xLabelArray = @[@"9-23",@"9-24",@"9-25",@"9-26",@"9-27",@"9-28",@"9-23",@"9-24",@"9-25",@"9-26",@"9-27",@"9-28"];
-    //    self.yLabelArray = @[@[@"50",@"80",@"90",@"12",@"43",@"55",@"50",@"80",@"90",@"12",@"43",@"55"]];
-    
     [self.chartView showInView:_scrollView];
-    
+
+    _image = [[UIImageView alloc]initWithFrame:CGRectMake(0, _scrollView.frame.origin.y + _scrollView.frame.size.height + 10,
+                                                          [UIScreen width], 300)];
+    [_image setImage:[UIImage imageNamed:@"sport2.jpg"]];
+    [self.view addSubview:_image];
     
 }
 
@@ -65,7 +70,7 @@
     if (xLabelCount <= 5) {
         return [UIScreen width];
     }else{
-        return [UIScreen width] /5.0 * 6;
+        return [UIScreen width] /5.0 * xLabelCount;
     }
 }
 
