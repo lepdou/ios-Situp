@@ -1,5 +1,5 @@
  
-#ios应用 仰卧起坐教练
+#ios应用 俯卧撑&仰卧起坐教练
 ###首页 && 选择级别页面
 <img src="http://a4.qpic.cn/psb?/d2b67e7c-e0eb-4b11-baf9-13669a32f53f/B*pk03vmnoWL968M5GAudaCESAAIRl1LUwwNR*6b6ec!/b/dG8AAAAAAAAA&ek=1&kp=1&pt=0&bo=gAJyBO4CNgUDCAY!&sce=0-12-12&rf=viewer_311" width="250px" height="418px"/>&nbsp;&nbsp;&nbsp;&nbsp;
 <img src="http://a4.qpic.cn/psb?/d2b67e7c-e0eb-4b11-baf9-13669a32f53f/z5RuN8StsKK8Zoq10PryF*eG6p6XDE8lcB8uZM4AD9A!/b/dGsAAAAAAAAA&ek=1&kp=1&pt=0&bo=gAJyBO4CNgUDCAY!&sce=50-1-1&rf=viewer_311" width="250px" height="418px"/>
