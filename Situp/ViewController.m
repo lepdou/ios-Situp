@@ -34,8 +34,8 @@
     rootView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"common_background"]];
     self.title = @"仰卧起坐教练";
     #pragma clang diagnostic ignored"-Wdeprecated-declarations"
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"返回" style:UIBarButtonItemStyleBordered target:nil action:nil];
-    
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
+
     //开始锻炼按钮
     self.go = [self navBtnWithText:@"开始锻炼"
                          withFrame:CGRectMake([self marginLeft], ([UIScreen height] - [self btnGroupHeight])/2, [self btnWidth], [self btnHeight])

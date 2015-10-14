@@ -27,9 +27,9 @@
     [self initData];
     self.tableView=[[UITableView alloc]initWithFrame:self.view.bounds style:UITableViewStyleGrouped];
 
-    self.title = @"选择难度";
+    self.title = @"选择级别";
     #pragma clang diagnostic ignored"-Wdeprecated-declarations"
-    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"d" style:UIBarButtonItemStyleBordered target:nil action:nil];
+    self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStyleBordered target:nil action:nil];
     
 }
 
